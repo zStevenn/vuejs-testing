@@ -6,70 +6,11 @@
     </div>
     <div class="col-span-9 bg-gray-300 px-6 overflow-y-scroll">
       <!-- Topbar -->
-      <div class="flex justify-between pt-4 pb-12">
-        <!-- Gebruikersdetails -->
-        <div class="flex text-gray-700 gap-4">
-          <p>sellvation.stevenli (Gebruiker)</p>
-          <p class="px-2 bg-slate-400 text-gray-700 rounded">PLUS Retail</p>
-          <p>Uitloggen</p>
-        </div>
-        <!-- Tijd & Versie -->
-        <div class="flex gap-2 text-gray-700">
-          <current-time />
-          <p>Versie 2.0.1</p>
-        </div>
-      </div>
+      <top-navbar />
       <!-- Horizontal navbar -->
-      <div class="bg-slate-50 p-4 my-4 rounded shadow-sm">
-        <ul class="flex gap-4 text-gray-700">
-          <li class="text-red-500 underline underline-offset-8 decoration-4">
-            Home
-          </li>
-          <li>Home 1</li>
-          <li>Home 2</li>
-        </ul>
-      </div>
+      <content-navigation />
       <!-- Mijn berichten -->
-      <div class="bg-slate-50 p-4 my-4 rounded shadow-sm divide-y">
-        <h3 class="uppercase text-slate-700 font-semibold py-2">
-          mijn berichten
-        </h3>
-        <table class="table-auto w-full">
-          <thead>
-            <tr class="divide-y">
-              <th>Van</th>
-              <th>Ontvangen</th>
-              <th>Onderwerp</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              class="divide-y"
-              title="CCM professional constateerd een probleem"
-            >
-              <td>CCM Professional</td>
-              <td>26-11-2022 08:00:14</td>
-              <td>Probleem geconstateerd</td>
-            </tr>
-            <tr
-              class="divide-y"
-              title="CCM professional constateerd een probleem"
-            >
-              <td>CCM Professional</td>
-              <td>26-11-2022 08:00:14</td>
-              <td>Probleem geconstateerd</td>
-            </tr>
-            <tr
-              class="divide-y"
-              title="CCM professional constateerd een probleem"
-            >
-              <td>CCM Professional</td>
-              <td>26-11-2022 08:00:14</td>
-              <td>Probleem geconstateerd</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <my-messages />
       <!-- Mijn visitekaartje -->
       <div class="bg-slate-50 p-4 my-4 rounded shadow-sm divide-y">
         <h3 class="uppercase font-semibold text-slate-700">
@@ -80,6 +21,8 @@
           <p>Bedrijfsnaam: Sellvation marketing BV</p>
           <p>Telefoonnummer: +31 (085) 11 400 40</p>
           <p>Accounttype: Gebruiker</p>
+          <p><font-awesome-icon icon="phone" /></p>
+          <p><font-awesome-icon icon="house" /></p>
         </div>
       </div>
       <!-- Mijn kladblok -->
@@ -91,11 +34,17 @@
 <script>
 import CurrentTime from './components/CurrentTime.vue';
 import Sidebar from './components/Sidebar.vue';
+import MyMessages from './components/MyMessages.vue';
+import ContentNavigation from './components/ContentNavigation.vue';
+import TopNavbar from './components/TopNavbar.vue';
 
 export default {
   components: {
     CurrentTime,
     Sidebar,
+    MyMessages,
+    ContentNavigation,
+    TopNavbar,
   },
 };
 </script>
