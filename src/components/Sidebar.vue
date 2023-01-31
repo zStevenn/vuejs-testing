@@ -1,6 +1,6 @@
 <template>
   <div class="block">
-    <img src="https://via.placeholder.com/200x50" class="px-6 py-4" />
+    <img src="https://via.placeholder.com/200x70" class="px-6 py-4" />
     <p class="text-xs pb-1 px-6 text-gray-800">Campaign Content Manager</p>
     <p class="text-xs pb-4 px-6 italic">professional</p>
     <ul class="pl-6">
