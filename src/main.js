@@ -4,6 +4,7 @@ import './style.css';
 import App from './App.vue';
 import Home from './pages/Home.vue';
 import Crm from './pages/Crm.vue';
+import Cms from './pages/Cms.vue';
 import Ems from './pages/Ems.vue';
 import Profile from './pages/Profile.vue';
 import Zoeken from './pages/Zoeken.vue';

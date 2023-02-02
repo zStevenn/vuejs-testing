@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import CurrentTime from '../components/CurrentTime.vue';
 import MyMessages from '../components/MyMessages.vue';
 import ContentNavigation from '../components/ContentNavigation.vue';
 import TopNavbar from '../components/TopNavbar.vue';
@@ -21,7 +20,6 @@ import Kladblok from '../components/Kladblok.vue';
 
 export default {
   components: {
-    CurrentTime,
     MyMessages,
     ContentNavigation,
     TopNavbar,

@@ -15,5 +15,11 @@
 </template>
 
 <script>
-export default {};
+import CurrentTime from './CurrentTime.vue';
+
+export default {
+  components: {
+    CurrentTime,
+  },
+};
 </script>
