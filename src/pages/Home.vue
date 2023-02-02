@@ -1,14 +1,16 @@
 <template>
-  <!-- Topbar -->
-  <top-navbar />
-  <!-- Horizontal navbar -->
-  <content-navigation />
-  <!-- Mijn berichten -->
-  <my-messages />
-  <!-- Mijn visitekaartje -->
-  <visit-card />
-  <!-- Mijn kladblok -->
-  <kladblok />
+  <div class="grid gap-8">
+    <!-- Topbar -->
+    <top-navbar />
+    <!-- Horizontal navbar -->
+    <content-navigation />
+    <!-- Mijn berichten -->
+    <my-messages />
+    <!-- Mijn visitekaartje -->
+    <visit-card />
+    <!-- Mijn kladblok -->
+    <kladblok />
+  </div>
 </template>
 
 <script>

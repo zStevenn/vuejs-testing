@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-50 p-4 my-4 rounded shadow-sm divide-y">
+  <div class="bg-slate-50 p-4 rounded shadow-sm divide-y">
     <h3 class="uppercase text-slate-700 font-semibold py-2 mb-4">
       mijn berichten
     </h3>

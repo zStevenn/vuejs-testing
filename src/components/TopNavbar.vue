@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-between pt-4 pb-12">
+  <div class="flex justify-between py-4">
     <!-- Gebruikersdetails -->
     <div class="flex text-gray-700 gap-4">
-      <p>sellvation.stevenli (Gebruiker)</p>
+      <p>sellvation.user123 (Gebruiker)</p>
       <p class="px-2 bg-slate-400 text-gray-700 rounded">Omgeving XXXX</p>
       <p>Uitloggen</p>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-50 p-4 my-4 rounded shadow-sm">
+  <div class="bg-slate-50 p-4 rounded shadow-sm">
     <ul class="flex gap-4 text-gray-700 cursor-pointer">
       <li
         v-for="(item, index) in items"

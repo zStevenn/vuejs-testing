@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-50 p-4 my-4 rounded shadow-sm divide-y">
+  <div class="bg-slate-50 p-4 rounded shadow-sm divide-y">
     <h3 class="uppercase font-semibold text-slate-700 mb-4">
       Mijn visitekaartje
     </h3>
