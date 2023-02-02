@@ -2,31 +2,15 @@
   <div class="bg-slate-50 p-4 my-4 rounded shadow-sm">
     <ul class="flex gap-4 text-gray-700 cursor-pointer">
       <li
+        v-for="(item, index) in items"
+        :key="index"
         :class="{
           'text-red-500 underline underline-offset-8 decoration-4':
-            active === 'home',
+            active === item.id,
         }"
-        @click="active = 'home'"
+        @click="updateActive(item.id)"
       >
-        Home
-      </li>
-      <li
-        :class="{
-          'text-red-500 underline underline-offset-8 decoration-4':
-            active === 'home1',
-        }"
-        @click="active = 'home1'"
-      >
-        Home 1
-      </li>
-      <li
-        :class="{
-          'text-red-500 underline underline-offset-8 decoration-4':
-            active === 'home2',
-        }"
-        @click="active = 'home2'"
-      >
-        Home 2
+        {{ item.name }}
       </li>
     </ul>
   </div>
@@ -37,7 +21,13 @@ export default {
   data() {
     return {
       active: 'home',
+      items: [{ id: 'home', name: 'Home' }],
     };
+  },
+  methods: {
+    updateActive(id) {
+      this.active = id;
+    },
   },
 };
 </script>

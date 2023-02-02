@@ -5,15 +5,19 @@
     <p class="text-xs pb-4 px-6 italic">professional</p>
     <ul class="pl-6 cursor-pointer">
       <li
-        v-for="(item, index) in items"
+        v-for="(menu, index) in items"
         :key="index"
         :class="{
-          'py-2 pl-1': true,
-          'bg-gray-300 rounded-l-lg': index === activeIndex,
+          'py-3 pl-3': true,
+          'bg-gray-300 rounded-l-lg relative shadow shadow-gray-300':
+            index === activeIndex,
         }"
         @click="updateActive(index)"
       >
-        {{ item }}
+        <router-link to="{{menu.to}}">
+          <font-awesome-icon class="mr-2" :icon="menu.icon" />
+          {{ menu.label }}
+        </router-link>
       </li>
     </ul>
   </div>
@@ -23,7 +27,14 @@
 export default {
   data() {
     return {
-      items: ['Home', 'CRM', 'CMS', 'EMS', 'Zoeken', 'Mijn CCM'],
+      items: [
+        { label: 'Home', icon: 'house', to: '/' },
+        { label: 'CRM', icon: 'gear', to: '/CRM' },
+        { label: 'CMS', icon: 'table', to: '/' },
+        { label: 'EMS', icon: 'table', to: '/' },
+        { label: 'Zoeken', icon: 'search', to: '/' },
+        { label: 'Mijn CCM', icon: 'user', to: '/' },
+      ],
       activeIndex: 0,
     };
   },
