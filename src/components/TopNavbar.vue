@@ -3,7 +3,7 @@
     <!-- Gebruikersdetails -->
     <div class="flex text-gray-700 gap-4">
       <p>sellvation.stevenli (Gebruiker)</p>
-      <p class="px-2 bg-slate-400 text-gray-700 rounded">PLUS Retail</p>
+      <p class="px-2 bg-slate-400 text-gray-700 rounded">Omgeving XXXX</p>
       <p>Uitloggen</p>
     </div>
     <!-- Tijd & Versie -->

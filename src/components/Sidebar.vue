@@ -14,7 +14,7 @@
         }"
         @click="updateActive(index)"
       >
-        <router-link to="{{menu.to}}">
+        <router-link :to="menu.to">
           <font-awesome-icon class="mr-2" :icon="menu.icon" />
           {{ menu.label }}
         </router-link>
@@ -29,11 +29,11 @@ export default {
     return {
       items: [
         { label: 'Home', icon: 'house', to: '/' },
-        { label: 'CRM', icon: 'gear', to: '/CRM' },
-        { label: 'CMS', icon: 'table', to: '/' },
-        { label: 'EMS', icon: 'table', to: '/' },
-        { label: 'Zoeken', icon: 'search', to: '/' },
-        { label: 'Mijn CCM', icon: 'user', to: '/' },
+        { label: 'CRM', icon: 'gear', to: '/crm' },
+        { label: 'CMS', icon: 'table', to: '/cms' },
+        { label: 'EMS', icon: 'table', to: '/ems' },
+        { label: 'Zoeken', icon: 'search', to: '/zoeken' },
+        { label: 'Mijn CCM', icon: 'user', to: '/profile' },
       ],
       activeIndex: 0,
     };

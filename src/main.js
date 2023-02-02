@@ -2,6 +2,11 @@ import { createApp } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import './style.css';
 import App from './App.vue';
+import Home from './pages/Home.vue';
+import Crm from './pages/Crm.vue';
+import Ems from './pages/Ems.vue';
+import Profile from './pages/Profile.vue';
+import Zoeken from './pages/Zoeken.vue';
 
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -15,14 +20,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-// 1. Define route components.
-const Home = { template: '<div>Home</div>' };
-const Crm = { template: '<div>CRM</div>' };
-
 // 2. Define some routes
 const routes = [
   { path: '/', component: Home },
-  { path: '/Crm', component: Crm },
+  { path: '/crm', component: Crm },
+  { path: '/ems', component: Ems },
+  { path: '/cms', component: Cms },
+  { path: '/profile', component: Profile },
+  { path: '/zoeken', component: Zoeken },
 ];
 
 // 3. Create the router instance and pass the `routes` option
@@ -35,6 +40,6 @@ const router = createRouter({
 // Add icon to library
 library.add(faHouse, faGear, faTable, faMagnifyingGlass, faUser, faAddressCard);
 
-const app = createApp(App)
-  .component('font-awesome-icon', FontAwesomeIcon)
-  .mount('#app');
+const app = createApp(App);
+
+app.use(router).component('font-awesome-icon', FontAwesomeIcon).mount('#app');
