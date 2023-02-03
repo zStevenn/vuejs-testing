@@ -3,7 +3,7 @@
     <!-- Topbar -->
     <top-navbar />
     <!-- Horizontal navbar -->
-    <content-navigation />
+    <content-navigation :items="items" />
     <!-- Mijn berichten -->
     <my-messages />
     <!-- Mijn visitekaartje -->
@@ -27,6 +27,11 @@ export default {
     TopNavbar,
     VisitCard,
     Kladblok,
+  },
+  data() {
+    return {
+      items: [{ id: 'home', name: 'Home' }],
+    };
   },
 };
 </script>

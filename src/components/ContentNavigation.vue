@@ -5,6 +5,7 @@
         v-for="(item, index) in items"
         :key="index"
         :class="{
+          'hover:text-red-500': true,
           'text-red-500 underline underline-offset-8 decoration-4':
             active === item.id,
         }"
@@ -18,11 +19,19 @@
 
 <script>
 export default {
+  props: {
+    items: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      active: 'home',
-      items: [{ id: 'home', name: 'Home' }],
+      active: null,
     };
+  },
+  created() {
+    this.active = this.items[0].id;
   },
   methods: {
     updateActive(id) {
