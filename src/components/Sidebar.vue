@@ -6,10 +6,11 @@
     <ul class="pl-6 cursor-pointer">
       <li
         v-for="(menu, index) in items"
+        :title="menu.title"
         :key="index"
         :class="{
-          'py-3 pl-3': true,
-          'bg-gray-300 rounded-l-lg relative shadow shadow-gray-300':
+          'py-3 pl-3 hover:text-blue-400': true,
+          'bg-gray-300 rounded-l-lg relative shadow shadow-gray-300 text-blue-400':
             index === activeIndex,
         }"
         @click="updateActive(index)"
@@ -28,12 +29,43 @@ export default {
   data() {
     return {
       items: [
-        { label: 'Home', icon: 'house', to: '/' },
-        { label: 'CRM', icon: 'gear', to: '/crm' },
-        { label: 'CMS', icon: 'table', to: '/cms' },
-        { label: 'EMS', icon: 'table', to: '/ems' },
-        { label: 'Zoeken', icon: 'search', to: '/zoeken' },
-        { label: 'Mijn CCM', icon: 'user', to: '/profile' },
+        {
+          label: 'Home',
+          icon: 'house',
+          to: '/',
+          title: 'Home: startpagina met uw persoonlijke berichten',
+        },
+        {
+          label: 'CRM',
+          icon: 'gear',
+          to: '/crm',
+          title: 'Customer Relationship Management',
+        },
+        {
+          label: 'CMS',
+          icon: 'table',
+          to: '/cms',
+          title: 'Content Management System',
+        },
+        {
+          label: 'EMS',
+          icon: 'table',
+          to: '/ems',
+          title: 'E-mail marketing system',
+        },
+        {
+          label: 'Zoeken',
+          icon: 'search',
+          to: '/zoeken',
+          title:
+            'Zoeken: zoeken naar items binnen alle CCM modules tegelijkertijd',
+        },
+        {
+          label: 'Mijn CCM',
+          icon: 'user',
+          to: '/profile',
+          title: 'Mijn CCM: uw persoonlijke instellingen en systeemverbruik',
+        },
       ],
       activeIndex: 0,
     };
